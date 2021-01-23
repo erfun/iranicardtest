@@ -40,7 +40,6 @@ run command:
 php artisan migrate 
 ```
 
-##Headers (Underline)
 
 Have fun
 =============
