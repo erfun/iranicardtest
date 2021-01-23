@@ -22,6 +22,7 @@ class User extends Authenticatable
         'password',
         'api_token',
         'register_token',
+        'registration_token_expire_time'
     ];
 
     /**
