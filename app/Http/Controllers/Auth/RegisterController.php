@@ -69,7 +69,8 @@ class RegisterController extends Controller
 
         $user = User::create([
             'email' => $request->email,
-            'register_token' => $otpCode
+            'register_token' => $otpCode,
+            'registration_token_expire_time' => Carbon::now()
         ]);
 
         $user->notify(new \App\Notifications\SendOtpEmail($otpCode));
@@ -106,6 +107,7 @@ class RegisterController extends Controller
             $user->password = Hash::make($request->password);
             $user->register_token = null;
             $user->email_verified_at = Carbon::now();
+
             if ($user->save())
                 return response()->json(['success' => true, 'message' => "user successfully registered."]);
             else
