@@ -15,7 +15,7 @@ class CategoryController extends Controller
         return CategoryResource::collection(Category::all());
     }
 
-    public function userCategoryList()
+    public function list()
     {
         return CategoryResource::collection(Category::where("user_id", Auth::id())->get());
     }

@@ -29,20 +29,11 @@ class PostController extends Controller
                 $query->where("content", "LIKE", "%{$request->keyword}%");
 
         })->get());
+    }
 
-
-//        if (isset($request->creator_id)) {
-//            $post_result->where("user_id", $request->creator_id);
-////            dd($request->creator_id);
-//        }
-
-//        if (isset($request->cat_id))
-//            $post_result->where("category_id", $request->cat_id);
-//
-//        if (isset($request->keyword))
-//            $post_result->where("content", "LIKE", "%{$request->keyword}%");
-
-
+    public function list()
+    {
+        return PostResource::collection(Post::where("user_id", Auth::id())->get());
     }
 
     public function create(PostRequest $request)

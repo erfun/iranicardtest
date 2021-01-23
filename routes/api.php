@@ -34,11 +34,13 @@ Route::group(["prefix" => "user"], function () {
 Route::group(["middleware" => "auth:api"], function () {
 
     Route::group(["prefix" => "category"], function () {
+        Route::get("list", [CategoryController::class, "list"]);
         Route::post("create", [CategoryController::class, "create"]);
         Route::post("update/{id}", [CategoryController::class, "update"]);
     });
 
     Route::group(["prefix" => "post"], function () {
+        Route::get("list", [PostController::class, "list"]);
         Route::post("create", [PostController::class, "create"]);
         Route::post("update/{id}", [PostController::class, "update"]);
     });
