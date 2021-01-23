@@ -18,17 +18,26 @@ class PostController extends Controller
 
     public function searchPost(Request $request)
     {
-        return PostResource::collection(Post::where(function ($query) use ($request) {
-            if (isset($request->creator_id)) {
-                $query->orwhere("user_id", $request->creator_id);
-            }
-            if (isset($request->cat_id))
-                $query->where("category_id", $request->cat_id);
+//        return PostResource::collection(Post::where(function ($query) use ($request) {
+//            if (isset($request->creator_id)) {
+//                $query->orwhere("user_id", $request->creator_id);
+//            }
+//            if (isset($request->cat_id))
+//                $query->where("category_id", $request->cat_id);
+//
+//            if (isset($request->keyword))
+//                $query->where("content", "LIKE", "%{$request->keyword}%");
+//
+//        })->get());
 
-            if (isset($request->keyword))
-                $query->where("content", "LIKE", "%{$request->keyword}%");
+        /**
+         * look at scopeFilterBy function in Post model
+         */
+        $query_filters = ['key' => $request->keyword, 'category' => $request->cat_id, 'user' => $request->creator_id];
+        $filtered_posts = Post::filterBy($query_filters)->get();
+        return PostResource::collection($filtered_posts);
 
-        })->get());
+
     }
 
     public function list()
