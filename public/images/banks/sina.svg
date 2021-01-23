@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 537 547" style="enable-background:new 0 0 537 547;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#277EB5;}
+	.st2{fill:#DBAF2E;}
+</style>
+<symbol  id="Bank_Sina_Color" viewBox="-24 -24 48 48">
+	<g id="Bank_Sina_Color_1_" transform="translate(1980 198)">
+		<rect id="Boundary-23_1_" x="-2004" y="-222" class="st0" width="48" height="48"/>
+		<path id="Shape-39_1_" class="st1" d="M-1989.8-216l-1.3,0.8l20.5,11.9v10.3l-7.3,4.3l11.6,6.9l7.4-4.4v-23.9l-20.5-11.9
+			L-1989.8-216z M-2000-209.8v23.9l20.5,11.9l10.3-6l1.3-0.8l-20.5-11.9V-203l7.3-4.3l-11.6-6.9L-2000-209.8z"/>
+		<path id="Shape-40_1_" class="st2" d="M-1979.5-205c3.9,0,7,3.1,7,7s-3.1,7-7,7s-7-3.1-7-7C-1986.5-201.9-1983.4-205-1979.5-205"
+			/>
+	</g>
+</symbol>
+<use xlink:href="#Bank_Sina_Color"  width="48" height="48" x="-24" y="-24" transform="matrix(11.0209 0 0 -11.0209 261.5013 274.5)" style="overflow:visible;"/>
+</svg>

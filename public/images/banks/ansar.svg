@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 537 547" style="enable-background:new 0 0 537 547;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#EEB900;}
+	.st2{fill:#AA1A1F;}
+</style>
+<symbol  id="Bank_x5F_Ansar_x5F_Color" viewBox="-24 -24 48 48">
+	<rect id="Boundary_40_" x="-24" y="-24" class="st0" width="48" height="48"/>
+	<path id="Shape_138_" class="st1" d="M-17-17v10h34v-10H-17z M-17,7v10h34V7H-17z"/>
+	<path id="Shape_71_" class="st2" d="M-7-16.9L17,7L24,0L0-24L-7-16.9z M-24,0L0,24l7-7.1L-17-7L-24,0z"/>
+</symbol>
+<use xlink:href="#Bank_x5F_Ansar_x5F_Color"  width="48" height="48" x="-24" y="-24" transform="matrix(10.75 0 0 -10.75 269.0006 274.0006)" style="overflow:visible;"/>
+</svg>
