@@ -18,15 +18,29 @@ class PostController extends Controller
 
     public function searchPost(Request $request)
     {
-        return PostResource::collection(Post::where(function ($query) use ($request) {
-            if (isset($request->creator_id)) {
-                $query->orwhere("user_id", $request->creator_id);
-            }
-            if (isset($request->cat_id))
-                $query->where("category_id", $request->cat_id);
+        $searchQuery = $request->all();
 
-            if (isset($request->keyword))
-                $query->where("content", "LIKE", "%{$request->keyword}%");
+
+        return PostResource::collection(Post::where(function ($queryBuilder) use ($searchQuery) {
+
+            foreach ($searchQuery as $key => $dataArray) {
+                if (in_array($key, (new Post())->fillable)) {
+                    if (strtolower($dataArray["type"]) == "exact") {
+                        $queryBuilder->where($key, $dataArray["value"]);
+                    } else if (strtolower($dataArray["type"]) == "like") {
+                        $queryBuilder->where($key, "LIKE", "%{$dataArray["value"]}%");
+                    }
+                }
+            }
+
+//            if (isset($request->creator_id)) {
+//                $query->orwhere("user_id", $request->creator_id);
+//            }
+//            if (isset($request->cat_id))
+//                $query->where("category_id", $request->cat_id);
+//
+//            if (isset($request->keyword))
+//                $query->where("content", "LIKE", "%{$request->keyword}%");
 
         })->get());
     }

@@ -17,8 +17,8 @@ class CategoryResource extends JsonResource
         $data = [
             "id" => $this->id,
             "creator_id" => $this->user_id,
-            "creator_name" => $this->user->name,
-            "creator_family" => $this->user->family,
+            "creator_name" => isset($this->user->name) ? $this->user->name : "unknown",
+            "creator_family" => isset($this->user->family) ? $this->user->family : "unknown",
             "title" => $this->title,
         ];
 

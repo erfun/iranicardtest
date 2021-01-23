@@ -9,7 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    public $fillable = [
         "user_id",
         "category_id",
         "title",
@@ -25,4 +25,5 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
 }
