@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(["prefix" => "user"], function () {
 
-    Route::post('register', [RegisterController::class, "register"]);
+    Route::post('register', [RegisterController::class, "register"])->middleware(["user.exist"]);
     Route::post('completeregistration', [RegisterController::class, "completeRegistration"]);
 
     Route::post('resetpassword', [ResetPasswordController::class, "resetPassword"]);
